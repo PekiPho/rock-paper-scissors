@@ -1,0 +1,15 @@
+body{
+    background-color: #70566D;
+}
+
+button{
+    margin-top:5vh;
+    padding:20px;
+    background-color: #42273B;
+    color:#e2fcef;
+    font-weight: bold;
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+}
