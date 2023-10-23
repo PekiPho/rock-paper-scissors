@@ -1,9 +1,11 @@
     let p=0;
     let c=0;
     let ps;
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('#btn');
 
-    
+    const rock = document.querySelectorAll('.rock');
+    const paper = document.querySelectorAll('.paper');
+    const scissors = document.querySelectorAll('.scissors');
     
     function getComputerChoice()
     {
@@ -52,8 +54,25 @@
             const playa=document.querySelector('.one');
             const comp=document.querySelector('.two');
 
-            box.textContent=playRound(button.id,getComputerChoice());
+            box.textContent=playRound(button.className,getComputerChoice());
             playa.textContent=p;
             comp.textContent=c;
+            if(playa.textContent==5)
+            {
+                alert("YOU WIN!!!");
+                playa.textContent=0;
+                comp.textContent=0;
+                p=0;
+                c=0;
+            }
+            debugger;
+            if(comp.textContent==5)
+            {
+                alert("YOU LOSE.");
+                playa.textContent=0;
+                comp.textContent=0;
+                p=0;
+                c=0;
+            }
         });
     });
